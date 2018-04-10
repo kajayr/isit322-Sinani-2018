@@ -1,0 +1,31 @@
+{
+  "name": "isit322-sinani-2018",
+  "version": "1.0.0",
+  "description": "ISIT322",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.7.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "DEBUG=firebase-express:server nodemon ./bin/www",
+    "bundle": "node_modules/.bin/webpack --watch",
+    "lint": "./node_modules/.bin/eslint source/isit322-Sinani-2018"
+  },
+  "config": {
+    "port": "30026"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kajayr/isit322-Sinani-2018.git"
+  },
+  "author": "Leo Sinani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kajayr/isit322-Sinani-2018/issues"
+  },
+  "homepage": "https://github.com/kajayr/isit322-Sinani-2018#readme"
+}
