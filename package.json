@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "ISIT322",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "concurrently": "^3.5.1"
+  },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
     "eslint": "^4.19.1",
