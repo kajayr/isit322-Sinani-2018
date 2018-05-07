@@ -15,14 +15,14 @@ class App extends Component {
     queryServer = () => {
         const that = this;
         fetch('/api/foo')
-            .then(function(response) {
+            .then(function (response) {
                 return response.json();
             })
-            .then(function(json) {
+            .then(function (json) {
                 console.log('parsed json', json);
                 that.setState(foo => (json));
             })
-            .catch(function(ex) {
+            .catch(function (ex) {
                 console.log('parsing failed, URL bad, network down, or similar', ex);
             });
     };
@@ -30,17 +30,17 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-            <div className="App-header">
-            <img src={logo} className="App-logo" alt="logo"/>
-            <h2>Welcome to React</h2>
-        </div>
+                <div className="App-header">
+                    <img src={logo} className="App-logo" alt="logo"/>
+                    <h2>Welcome to React</h2>
+                </div>
 
-        <p className="App-intro">
-            state: {this.state.status} file: {this.state.file}
-    </p>
-        <button onClick={this.queryServer}>Bar</button>
-        </div>
-    );
+                <p className="App-intro">
+                    state: {this.state.status} file: {this.state.file}
+                </p>
+                <button onClick={this.queryServer}>Bar</button>
+            </div>
+        );
     }
 }
 
