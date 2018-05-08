@@ -3,10 +3,7 @@
 /**
  * Module dependencies.
  */
-const args = [ 'start' ];
-const opts = { stdio: 'inherit', cwd: 'client', shell: true };
-const cp = require('child_process');
-cp.spawn('npm', args, opts);
+
 var app = require('../app');
 var debug = require('debug')('server:server');
 var http = require('http');
@@ -15,7 +12,7 @@ var http = require('http');
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || '30026');
+var port = normalizePort('30026');
 app.set('port', port);
 
 /**
