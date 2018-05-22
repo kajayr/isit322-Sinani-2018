@@ -4,7 +4,9 @@
   "description": "ISIT322",
   "main": "index.js",
   "dependencies": {
-    "concurrently": "^3.5.1"
+    "concurrently": "^3.5.1",
+    "material-ui": "^0.20.0",
+    "request": "^2.85.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
