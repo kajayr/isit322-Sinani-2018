@@ -8,12 +8,12 @@ class AppInit extends Component {
         super();
         this.state = {
             file: 'Get Nine Result will be placed here.',
-            foo: 'waiting for server'
+            status: 'waiting for server'
         };
 
     }
 
-    theFoo = () => {
+    callServer = () => {
         const that = this;
         fetch('/api/foo')
             .then(function(response) {
@@ -35,9 +35,13 @@ class AppInit extends Component {
                 </div>
 
                 <p className="App-intro">
-                    state: {this.state.foo} file: {this.state.file}
+                    status: {this.state.status}
                 </p>
-                <button onClick={this.theFoo}>Bar</button>
+                <p className="App-intro">
+                    file: {this.state.file}
+                </p>
+
+                <button id="getApp" onClick={this.callServer}>Bar</button>
             </div>
         );
     }

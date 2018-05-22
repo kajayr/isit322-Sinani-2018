@@ -5,7 +5,8 @@ class GetFoo extends Component{
         super();
         this.state ={
             file:'the result will be placed here',
-            foo:'waiting for server'
+            foo:'waiting for server',
+            status:'waiting for server'
         };
     }
     getFoo = () => {
@@ -27,15 +28,15 @@ class GetFoo extends Component{
         return (
             <div className="App">
                 <p className="App-intro">
-                    state.file:{this.state.file}
+                    file:{this.state.file}
                 </p>
 
                 <p className="App-intro">
-                    state.foo:{this.state.foo}
+                    status:{this.state.status}
                 </p>
 
 
-                <button className="getFoo" onClick={this.getFoo}>Click</button>
+                <button id="getFoo" onClick={this.getFoo}>Click</button>
 
 
             </div>
