@@ -11,15 +11,26 @@ it('renders without crashing', () => {
     ReactDOM.render(<GetFoo />, div);
     ReactDOM.unmountComponentAtNode(div);
 });
-it('renders state of File paragraph after button click', () => {
+
+describe('My GetFoo tests', function () {
+it('renders state of File paragraph after button click', (done) => {
     const wrapper = shallow(<GetFoo getFoo={GetFoo}  />);
-    const statusParagraph = <p className="App-intro">status: Mock Server Happy</p>;
+    const statusParagraph = <p className="App-intro">file: api.js</p>
+
     wrapper.find('#getFoo').simulate('click');
+
     setTimeout(() => {
+
         wrapper.update();
-        //elfDebugEnzyme.getFirst(wrapper, 'p');
-        expect(wrapper.contains(statusParagraph)).toBe(true);
-        //done();
+        console.log('BAR', wrapper.debug());
+        elfDebugEnzyme.getFirst(wrapper, 'p');
+        try {
+            expect(wrapper.containsMatchingElement(statusParagraph)).toBe(true);
+            // expect(true).toBe(true);
+        } catch(e) {
+            console.log(e);
+        }
+        done();
     }, 1);
 });
-
+});

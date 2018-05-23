@@ -36,7 +36,7 @@ export default class ElfDebugEnzyme {
      * the console includes the name of the class that is
      * requesting to see the output.
      */
-    constructor(showData=false, callerName = '') {
+    constructor(showData = false, callerName = '') {
         this.showData = showData;
         this.callerName = callerName + ':\n';
     }
