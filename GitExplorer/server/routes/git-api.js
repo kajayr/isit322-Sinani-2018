@@ -3,13 +3,12 @@ var router = express.Router();
 
 // EXISTING CODE OMITTED HERE
 router.get('/user', function(req, res, next) {
-    let options = {
+    const options = {
         url: 'https://api.github.com/users/kajayr',
         headers: {
             'User-Agent': 'request'
         }
     };
-
     request(options, function(error, response, body) {
         // Print the error if one occurred
         console.log('error:', error);
@@ -19,6 +18,8 @@ router.get('/user', function(req, res, next) {
         console.log('body:', body);
         res.send({error: error, response: response, body: body});
     });
+
+    //request('https://api.github.com/users/kajayr', options).pipe(response);
 
 });
 module.exports = router;
