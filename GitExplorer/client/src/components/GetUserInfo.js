@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 //import leo from  '../images/leo.svg';
 import '../css/App.css';
 import 'whatwg-fetch';
+import GetGit from "./GetGit";
 
 class GetUserInfo extends Component {
     constructor() {
@@ -29,12 +30,7 @@ class GetUserInfo extends Component {
 
     render() {
         return (
-            <div className="App">
-                {/*<div className="App-header">*/}
-                    {/*<img src={leo} className="App-logo" alt="leo"/>*/}
-                    {/*<h2>Welcome to React</h2>*/}
-                {/*</div>*/}
-
+                <div className="App">
                 <p className="App-intro">
                     file: {this.state.file}
                 </p>

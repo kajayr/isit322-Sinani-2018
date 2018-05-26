@@ -69,3 +69,15 @@
     left: 0.5em;
     margin-right: -50%;
 }
+
+#FirstP {
+    border: 4px dotted #0056b3;
+    background-color:white;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+#p1 {
+    color:cadetblue;
+    text-effect: engrave;
+    font: italic bold 20px/30px Georgia, serif;
+}

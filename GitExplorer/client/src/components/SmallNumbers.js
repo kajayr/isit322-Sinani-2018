@@ -4,42 +4,25 @@ class SmallNumbers extends Component{
     constructor(){
         super();
         this.state={
-            one:'1',
-            three:'3',
-            seven:'7',
-            nine:'9'
+            x:'xxx',
+        xx:'xxx',
+            xxx:'xxx'
+
         };
     }
-     getOne= () => {
-        this.setState({one:'1'})
+     getNumbers= () => {
+        this.setState({x:'425', xx: '444', xxx: '0923'})
      };
-    getThree= () => {
-        this.setState({three:'3'})
-    };
-    getSeven= () => {
-        this.setState({seven:'7'})
-    };
-    getNine= () => {
-        this.setState({nine:'9'})
-    };
+
     render(){
         return(
             <div className="App">
                 <p className= "App-intro">
-                    state.one:{this.state.one}
-                </p>
-
-                <p className= "App-intro">
-                        state.three:{this.state.three}
-                    </p>
-
-                <p className= "App-intro">
-                            state.Seven:{this.state.seven}
+                    {this.state.x}-
+                        {this.state.xx}-
+                            {this.state.xxx}
                         </p>
-                <p className= "App-intro">
-                                state.nine:{this.state.nine}
-                            </p>
-                <button className="getOne" onClick={this.getOne}>Click</button>
+                <button className="getOne" onClick={this.getNumbers}>Show The Number</button>
             </div>
         );
     }

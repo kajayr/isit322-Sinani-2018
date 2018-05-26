@@ -1,0 +1,17 @@
+#head
+{
+    border: 2px solid;
+    padding: 20px;
+    resize: both;
+    overflow: auto;
+    list-style-type: none;
+    overflow: hidden;
+    color: blue;
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: 30%;
+    border: 5px groove blue;
+    padding: 10px;
+    background-color: white;
+}
