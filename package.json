@@ -4,7 +4,8 @@
   "description": "ISIT322",
   "main": "index.js",
   "dependencies": {
-    "concurrently": "^3.5.1"
+    "concurrently": "^3.5.1",
+    "github-api": "^3.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
