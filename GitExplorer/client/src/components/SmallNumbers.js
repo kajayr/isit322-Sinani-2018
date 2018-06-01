@@ -1,4 +1,8 @@
 import React, {Component} from 'react';
+import FontIcon from 'material-ui/FontIcon';
+import { red500 } from 'material-ui/styles/colors';
+import styles from './elf-styles';
+import RaisedButton from 'material-ui/RaisedButton';
 
 class SmallNumbers extends Component{
     constructor(){
@@ -22,7 +26,17 @@ class SmallNumbers extends Component{
                         {this.state.xx}-
                             {this.state.xxx}
                         </p>
-                <button className="getOne" onClick={this.getNumbers}>Show The Number</button>
+                <RaisedButton
+                    label="Show the Number"
+                    labelPosition="before"
+                    primary={true}
+                    icon={<FontIcon
+                        class="material-icons"
+                        color={red500}>rss_feed</FontIcon>}
+                    style={styles.button}
+                    onClick={this.getNumbers}
+                />
+                {/*<button className="getOne" onClick={this.getNumbers}>Show The Number</button>*/}
             </div>
         );
     }

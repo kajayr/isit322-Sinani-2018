@@ -1,5 +1,9 @@
 import React, {Component} from 'react';
 import 'whatwg-fetch';
+import FontIcon from 'material-ui/FontIcon';
+import { red500 } from 'material-ui/styles/colors';
+import styles from './elf-styles';
+import RaisedButton from 'material-ui/RaisedButton';
 
 class GetGit extends Component {
     constructor() {
@@ -53,8 +57,17 @@ class GetGit extends Component {
                 <p>Location: {this.state.location}</p>
                 <p>Company: {this.state.company}</p>
 
-
-                <button className="getGit" onClick={this.getGit}>Click for Git</button>
+                <RaisedButton
+                    label="Click for Git"
+                    labelPosition="before"
+                    primary={true}
+                    icon={<FontIcon
+                        class="material-icons"
+                        color={red500}>rss_feed</FontIcon>}
+                    style={styles.button}
+                    onClick={this.getGit}
+                />
+                {/*<button className="getGit" onClick={this.getGit}>Click for Git</button>*/}
 
             </div>
         );

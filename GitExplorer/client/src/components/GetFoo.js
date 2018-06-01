@@ -1,4 +1,8 @@
 import React, {Component} from 'react';
+import FontIcon from 'material-ui/FontIcon';
+import { red500 } from 'material-ui/styles/colors';
+import styles from './elf-styles';
+import RaisedButton from 'material-ui/RaisedButton';
 
 class GetFoo extends Component{
     constructor(){
@@ -34,8 +38,18 @@ class GetFoo extends Component{
                 <p className="App-intro">
                     status: {this.state.status}
                 </p>
-                <button id="getFoo" onClick={this.getFoo}>Get Foo</button>
-                <p></p>
+                <RaisedButton
+                    label="Get Foo"
+                    labelPosition="before"
+                    primary={true}
+                    icon={<FontIcon
+                        class="material-icons"
+                        color={red500}>rss_feed</FontIcon>}
+                    style={styles.button}
+                    onClick={this.getFoo}
+                />
+                {/*<button id="getFoo" onClick={this.getFoo}>Get Foo</button>*/}
+                <br />
                 <div id={"FirstP"}>
                     <p id={"p1"}> The good life is a process, not a state of being. It is a direction not a destination.
                     </p>
