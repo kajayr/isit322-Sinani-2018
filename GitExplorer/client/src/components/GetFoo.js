@@ -37,14 +37,7 @@ class GetFoo extends Component{
                 <button id="getFoo" onClick={this.getFoo}>Get Foo</button>
                 <p></p>
                 <div id={"FirstP"}>
-                    <p id={"p1"}> Teachers change lives. Being the right person at the right time may be enough to change a person's life forever.<br />
-                        Human beings are constantly changing.<br />
-                        Whether for the good or for the bad, we do not stay the same.<br />
-                        Having a positive influence in the form of a teacher can make or break a human being.<br />
-                        Years after we are out of school, we remember the teachers that changed our lives.<br />
-                        In most cases these may have been the first people that believed in us.<br />
-                        That experience of having an authority figure believe that we could succeed carries us forever.<br />
-
+                    <p id={"p1"}> The good life is a process, not a state of being. It is a direction not a destination.
                     </p>
                 </div>
             </div>
