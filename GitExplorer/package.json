@@ -1,0 +1,28 @@
+{
+  "name": "lookup-server",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "scripts": {
+    "start": "concurrently 'npm run micros' 'npm run client'",
+    "server": "npx babel-node server/bin/www",
+    "client": "npx babel-node start-client.js",
+    "micros": "concurrently 'npm run micro-qux'",
+    "micro-qux": "npx babel-node ../Micros/qux/bin/www",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-eslint": "^7.2.3",
+    "concurrently": "3.4.0",
+    "eslint": "^3.19.0",
+    "eslint-config-google": "^0.9.1",
+    "eslint-plugin-import": "2.3.0",
+    "eslint-plugin-jsx-a11y": "5.0.3",
+    "eslint-plugin-react": "^7.8.2",
+    "prettier": "1.13.4"
+  }
+}
