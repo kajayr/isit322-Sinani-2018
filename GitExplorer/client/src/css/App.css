@@ -81,3 +81,23 @@
     text-effect: engrave;
     font: italic bold 20px/30px Georgia, serif;
 }
+
+.myUl li {
+    font-size: 16px;
+    text-align: center;
+    list-style-type: none;
+
+}
+
+.btnStyle {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.myImage {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+}

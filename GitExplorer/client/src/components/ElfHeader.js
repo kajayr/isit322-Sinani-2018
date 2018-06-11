@@ -56,6 +56,16 @@ class ElfHeader extends Component{
                         containerElement={<Link to="/SmallNumbers"/>}
                         onClick={this.handleToggle}
                     />
+                    <MenuItem
+                        primaryText='New Gist'
+                        containerElement={<Link to="/ShowGist"/>}
+                        onClick={this.handleToggle}
+                    />
+                   <MenuItem
+                        primaryText='Get Gist List'
+                        containerElement={<Link to="/get-gist-list"/>}
+                        onClick={this.handleToggle}
+                    />
                 </Drawer>
             </div>
         );
