@@ -2,15 +2,17 @@
   "name": "lookup-server",
   "version": "0.0.1",
   "private": true,
-  "dependencies": {
-    "express": "^4.16.3"
+    "dependencies": {
+    "babel-cli": "6.24.0",
+    "babel-core": "6.24.0",
+    "express": "4.15.3"
   },
   "scripts": {
-    "start": "concurrently 'npm run micros' 'npm run client'",
-    "server": "npx babel-node server/bin/www",
-    "client": "npx babel-node start-client.js",
-    "micros": "concurrently 'npm run micro-qux'",
-    "micro-qux": "npx babel-node ../Micros/qux/bin/www",
+    "start": "concurrently 'npm run micros' 'npm run server' 'npm run client'",
+    "server": "node ./server/bin/www",
+    "client": "node start-client.js",
+    "micros": "node ../Micros/qux/bin/www",
+    "micro-qux": "node ../Micros/qux/bin/www",
     "lint": "eslint ."
   },
   "devDependencies": {
