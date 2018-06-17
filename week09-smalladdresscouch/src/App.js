@@ -18,10 +18,10 @@ class App extends Component {
         }
     }
 
-    componentDidMount() {
+   componentDidMount() {
         this.db = new PouchDB('addresses');
-        //this.remoteCouch = 'http://admin:admin@192.168.1.14:5984/addresses';
-        this.remoteCouch = false;
+        this.remoteCouch = 'http://admin:admin@192.168.1.14:5984/addresses';
+        //this.remoteCouch = false;
         this.syncDom = document.getElementById('sync-wrapper');
 
         this.db.changes({
@@ -29,6 +29,18 @@ class App extends Component {
             live: true
         }).on('change', this.showAddress);
     }
+
+    init = () => {
+        const DB_NAME='address-charlie-nine';
+        this.db = new PouchDB(DB_NAME);
+        this.remoteCouch = 'http://192.168.1.14:5984/' + DB_NAME;
+        //this.remoteCouch = false;
+        this.syncDom = document.getElementById('sync-wrapper');
+        this.db.changes({
+            since: 'now',
+            live: true
+        }).on('change', this.showAddress);
+    };
 
     addAddress = (data) => {
         const indexValue = this.state.addressIndex + 1;

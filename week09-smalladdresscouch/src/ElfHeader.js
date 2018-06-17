@@ -1,6 +1,4 @@
 import React, {Component} from 'react';
-import leo from  '../images/sun.png';
-import '../css/index.css';
 import {Link} from "react-router-dom";
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
