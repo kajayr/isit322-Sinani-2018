@@ -8,10 +8,11 @@
     "express": "4.15.3"
   },
   "scripts": {
-    "start": "concurrently 'npm run micros' 'npm run server' 'npm run client'",
+    "start": "concurrently 'npm run micros' 'npm run gists' 'npm run server' 'npm run client'",
     "server": "node ./server/bin/www",
     "client": "node start-client.js",
     "micros": "node ../Micros/qux/bin/www",
+    "gists": "node ../Micros/gist/bin/www",
     "micro-qux": "node ../Micros/qux/bin/www",
     "lint": "eslint ."
   },

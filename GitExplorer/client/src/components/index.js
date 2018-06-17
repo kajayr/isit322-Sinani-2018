@@ -41,7 +41,7 @@ class App extends Component {
 
     fetchGistLists(event) {
         const that = this;
-        fetch('/gists/get-gist-list')
+        fetch('/gist/get-gist-list')
             .then(function(response) {
                 return response.json();
             }).then(function(json) {
@@ -59,7 +59,7 @@ class App extends Component {
     };
 
     gistDelete(param, callback) {
-        var url = '/gists/delete?gistId=' + param;
+        var url = '/gist/delete?gistId=' + param;
 
         return fetch(url)
             .then((res) => res.json())
@@ -71,7 +71,7 @@ class App extends Component {
     };
 
     gistToMarkDown(id, callback) {
-        var url = '/gists/gistToMarkdown?gistId=' + id;
+        var url = '/gist/gistToMarkdown?gistId=' + id;
 
         return fetch(url)
             .then((res) => res.json())
@@ -83,7 +83,7 @@ class App extends Component {
     };
 
     updateGistFromFile(id, callback) {
-        var url = '/gists/gistFileUpdate?gistId=' + id;
+        var url = '/gist/gistFileUpdate?gistId=' + id;
 
         return fetch(url)
             .then((res) => res.json())
