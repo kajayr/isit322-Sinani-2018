@@ -12,8 +12,6 @@ class GistLister extends Component {
         };
         this.gistIterator = this.gistIterator.bind(this);
         this.gistDelete = this.gistDelete.bind(this);
-        this.gistToMarkDown = this.gistToMarkDown.bind(this);
-        this.updateGistFromFile = this.updateGistFromFile.bind(this);
     }
 
     gistIterator(event) {
@@ -37,20 +35,6 @@ class GistLister extends Component {
     gistDelete() {
         const id = this.props.gistList[this.state.index].id;
         this.props.gistDelete(id, () => {
-            this.props.fetchGistLists();
-        });
-    }
-
-    gistToMarkDown() {
-        const myId = this.props.gistList[this.state.index].id;
-        this.props.gistToMarkDown(myId, () => {
-            this.props.fetchGistLists();
-        });
-    }
-
-    updateGistFromFile() {
-        const myId = this.props.gistList[this.state.index].id;
-        this.props.updateGistFromFile(myId, () => {
             this.props.fetchGistLists();
         });
     }
@@ -96,24 +80,6 @@ class GistLister extends Component {
                     >
                     Delete
                 </LButton>
-                <LButton
-                    variant="raised"
-                    color="primary"
-                    disabled={!this.props.gistCanIterate}
-                    onClick={this.gistToMarkDown}
-                    id="gistToMarkdown"
-                >
-                Gist To Markdown
-            </LButton>
-                <LButton
-                    variant="raised"
-                    color="primary"
-                    disabled={!this.props.gistCanIterate}
-                    onClick={this.updateGistFromFile}
-                    id="updateGistFromFile"
-                >
-            Update Gist From File
-        </LButton>
 
                 <ul></ul>
                 <ul></ul>

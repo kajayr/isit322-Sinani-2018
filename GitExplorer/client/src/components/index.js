@@ -35,8 +35,6 @@ class App extends Component {
         };
         this.fetchGistLists = this.fetchGistLists.bind(this);
         this.gistDelete = this.gistDelete.bind(this);
-        this.gistToMarkDown = this.gistToMarkDown.bind(this);
-        this.updateGistFromFile = this.updateGistFromFile.bind(this);
     }
 
     fetchGistLists(event) {
@@ -69,31 +67,6 @@ class App extends Component {
             })
             .catch((ex) => console.log('Fetch Exception', ex));
     };
-
-    gistToMarkDown(id, callback) {
-        var url = '/gist/gistToMarkdown?gistId=' + id;
-
-        return fetch(url)
-            .then((res) => res.json())
-            .then((json) => {
-                console.log(json);
-                callback(json);
-            })
-            .catch((ex) => console.log('Fetch Exception', ex));
-    };
-
-    updateGistFromFile(id, callback) {
-        var url = '/gist/gistFileUpdate?gistId=' + id;
-
-        return fetch(url)
-            .then((res) => res.json())
-            .then((json) => {
-                console.log(json);
-                callback(json);
-            })
-            .catch((ex) => console.log('Fetch Exception', ex));
-    };
-
 
     render() {
         return (
