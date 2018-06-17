@@ -6,6 +6,7 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import registerServiceWorker from './registerServiceWorker';
 import purple from '@material-ui/core/colors/purple';
 import green from '@material-ui/core/colors/green';
+// trying @ in front
 
 const themePurple = createMuiTheme({
     palette: {
