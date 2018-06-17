@@ -19,8 +19,8 @@ describe('My Header tests', function () {
     const elfDebugEnzyme = new ElfDebugEnzyme(true, 'Header.test.js');
 
     it('renders and reads H1 text', () => {
-        const wrapper = shallow(<ElfHeader ElfHeader={ElfHeader}  />);
-        const welcome = <h1 className="fancy">Welcome to Sky App</h1>;
+        const wrapper = mount(<ElfHeader ElfHeader={ElfHeader}  />);
+        const welcome = <h1 className='fancy'>Welcome to Sky App</h1>;
         elfDebugEnzyme.getFirst(wrapper, 'h1');
                 expect(wrapper.contains(welcome)).toEqual(true);
     });

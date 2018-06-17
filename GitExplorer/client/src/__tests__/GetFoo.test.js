@@ -14,7 +14,7 @@ it('renders without crashing', () => {
 
 describe('My GetFoo tests', function () {
 it('renders state of File paragraph after button click', (done) => {
-    const wrapper = shallow(<GetFoo getFoo={GetFoo}  />);
+    const wrapper = mount(<GetFoo getFoo={GetFoo}  />);
     const statusParagraph = <p className="App-intro">file: api.js</p>
 
     wrapper.find('#getFoo').simulate('click');

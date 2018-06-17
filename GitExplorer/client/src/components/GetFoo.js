@@ -41,7 +41,7 @@ class GetFoo extends Component{
                     variant="raised"
                     color="primary"
                     onClick={this.getFoo}
-                    id="getGit"
+                    id="getFoo"
                     >
                     Get Foo
                 </Button>
