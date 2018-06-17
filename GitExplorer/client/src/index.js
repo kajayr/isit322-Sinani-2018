@@ -4,18 +4,23 @@ import './css/index.css';
 import App from './components/index';
 //import AppInit from './components/app-init';
 import registerServiceWorker from './registerServiceWorker';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import 'bootstrap/dist/css/bootstrap.css';
+
 import {Provider} from 'react-redux';
 import {createStore} from 'redux';
 import gistReducer from './assets/gist-reducer';
 
+const themeDark = createMuiTheme({
+    palette: {
+        type: 'dark'
+    }
+});
+
 let store = createStore(gistReducer);
 
 ReactDOM.render(
-    <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+    <MuiThemeProvider theme={themeDark}>
         <Provider store={store}>
         <App />
         </Provider>

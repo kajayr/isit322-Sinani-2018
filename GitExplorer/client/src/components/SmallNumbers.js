@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
-import FontIcon from 'material-ui/FontIcon';
-import { red500 } from 'material-ui/styles/colors';
 import styles from './elf-styles';
-import RaisedButton from 'material-ui/RaisedButton';
+import Button from '@material-ui/core/Button';
 
 class SmallNumbers extends Component{
     constructor(){
@@ -26,16 +24,15 @@ class SmallNumbers extends Component{
                         {this.state.xx}-
                             {this.state.xxx}
                         </p>
-                <RaisedButton
-                    label="Show the Number"
-                    labelPosition="before"
-                    primary={true}
-                    icon={<FontIcon
-                        class="material-icons"
-                        color={red500}>rss_feed</FontIcon>}
-                    style={styles.button}
-                    onClick={this.getNumbers}
-                />
+
+                <Button
+                variant="raised"
+                color="primary"
+                onClick={this.getNumbers}
+                id="getGit"
+            >
+            Show the Number
+        </Button>
                 {/*<button className="getOne" onClick={this.getNumbers}>Show The Number</button>*/}
             </div>
         );

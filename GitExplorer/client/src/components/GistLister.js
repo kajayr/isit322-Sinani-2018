@@ -1,9 +1,7 @@
 import '../css/App.css';
 import React, {Component} from 'react';
-import FontIcon from 'material-ui/FontIcon';
-import { red500 } from 'material-ui/styles/colors';
 import styles from './elf-styles';
-import RaisedButton from 'material-ui/RaisedButton';
+import LButton from '@material-ui/core/Button';
 import {Button} from 'react-bootstrap';
 
 class GistLister extends Component {
@@ -75,58 +73,47 @@ class GistLister extends Component {
                     <li id='avatarUrl'>Avatar Url: {this.props.gistList[0].avatarUrl}</li>
                 </ul>
                 }
-                <RaisedButton
-                    id='gistList'
-                    label="Get Gists"
-                    labelPosition="before"
-                    primary={true}
+                <LButton
+                    variant="raised"
+                    color="primary"
                     disabled={this.props.gistCanIterate}
-                    icon={<FontIcon
-                        class="material-icons"
-                        color={red500}>rss_feed</FontIcon>}
-                    style={styles.button}
                     onClick={this.props.fetchGistLists}
-                />
+                    id="gistList"
+            >
+            Get Gists
+        </LButton>
                 <Button bsStyle='primary' id='prevGist' className='btnStyle' onClick={this.gistIterator}
                         disabled={!this.props.gistCanIterate}>Prev Gist</Button>
                 <Button bsStyle='success' id='nextGist' className='btnStyle' onClick={this.gistIterator}
                         disabled={!this.props.gistCanIterate}>Next Gist</Button>
-                <RaisedButton
-                    id='gistDelete'
-                    label="Delete"
-                    labelPosition="before"
-                    primary={true}
+
+                <LButton
+                    variant="raised"
+                    color="primary"
                     disabled={!this.props.gistCanIterate}
-                    icon={<FontIcon
-                        class="material-icons"
-                        color={red500}>rss_feed</FontIcon>}
-                    style={styles.button}
                     onClick={this.gistDelete}
-                />
-                <RaisedButton
-                    id='gistToMarkdown'
-                    label="Gist To Markdown"
-                    labelPosition="before"
-                    primary={true}
+                    id="gistDelete"
+                    >
+                    Delete
+                </LButton>
+                <LButton
+                    variant="raised"
+                    color="primary"
                     disabled={!this.props.gistCanIterate}
-                    icon={<FontIcon
-                        class="material-icons"
-                        color={red500}>rss_feed</FontIcon>}
-                    style={styles.button}
                     onClick={this.gistToMarkDown}
-                />
-                <RaisedButton
-                    id='updateGistFromFile'
-                    label="Update Gist From File"
-                    labelPosition="before"
-                    primary={true}
+                    id="gistToMarkdown"
+                >
+                Gist To Markdown
+            </LButton>
+                <LButton
+                    variant="raised"
+                    color="primary"
                     disabled={!this.props.gistCanIterate}
-                    icon={<FontIcon
-                        class="material-icons"
-                        color={red500}>rss_feed</FontIcon>}
-                    style={styles.button}
                     onClick={this.updateGistFromFile}
-                />
+                    id="updateGistFromFile"
+                >
+            Update Gist From File
+        </LButton>
 
                 <ul></ul>
                 <ul></ul>
